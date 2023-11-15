@@ -34,7 +34,7 @@ function App() {
           href="./location.html"
           rel="noopener noreferrer"
         >
-          Smelltu hér til að halda áfram
+          Ekki smella!!!
         </a>
       </header>
     </div>
