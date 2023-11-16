@@ -71,10 +71,12 @@ function drop(event) {
   draggableElementData.classList.add("dragged");
   console.log('draggableElementData.classList 2: ', draggableElementData.classList);
   console.log('image draggable after change', draggableElementData);
-  console.log('drop event 2', event.target.classList);
 
-  draggableElementData.setAttribute("draggable", "false");
-  event.target.insertAdjacentHTML("afterbegin", `<i class="fas fa-${draggableElementData}"></i>`)
+  console.log('drop event 5', event.target.classList);
+
+  // draggableElementData.setAttribute("draggable", "false");
+  // event.target.insertAdjacentHTML("afterbegin", `<i class="fas fa-${draggableElementData}"></i>`)
+  event.target.appendChild(draggableElementData);
 }
 
 function App() {
@@ -112,8 +114,8 @@ function App() {
     <div className="App">
       <header className="App-header">
       <section className="droppable-elements">
-          <div className="droppable" data-draggable-id="house1"><span></span></div>
-          <div className="droppable" data-draggable-id="house2"><span>
+          <div className="droppable" ></div>
+          <div className="droppable" ><span>
             <img
               src={process.env.PUBLIC_URL + '/logo-mr-man.png'}
               className="draggable"
@@ -124,11 +126,11 @@ function App() {
               }}
             />
           </span></div>
-          <div className="droppable" data-draggable-id="house3"><span></span></div>
+          <div className="droppable"><span></span></div>
         </section>
         <h1> Hæ kennari, þetta er ég, Ísak :^) </h1> 
-        <p>Ég notaði React fyrir verkefnið og HTML Drag & Drop! Sjáðu hvað ég get farið hratt! </p>
-        <input
+        <p>Ég notaði React fyrir verkefnið og HTML Drag & Drop! Sjáðu hvað ég get farið hratt! Þú getur líka fært mig í annað box!</p>
+        <input  
           type="range"
           min="1"
           max="20"
