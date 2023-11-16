@@ -46,11 +46,11 @@ function drop(event) {
   const draggableElementData = document.querySelector(".draggable")
   // console.log('image draggable', draggableElementData);
   // console.log('drop event 4', event.target.classList);
-  console.log('image draggable before change', draggableElementData);
-  console.log('draggableElementData.classList: ', draggableElementData.classList);
+  //console.log('image draggable before change', draggableElementData);
+  //console.log('draggableElementData.classList: ', draggableElementData.classList);
   draggableElementData.classList.add("dragged");
-  console.log('draggableElementData.classList 2: ', draggableElementData.classList);
-  console.log('image draggable after change', draggableElementData);
+  //console.log('draggableElementData.classList 2: ', draggableElementData.classList);
+  //console.log('image draggable after change', draggableElementData);
   // console.log('drop event 5', event.target.classList);
   if (!event.target.classList.contains("dropped") && !event.target.classList.contains("draggable")) {
     event.target.appendChild(draggableElementData);
@@ -65,8 +65,8 @@ function App() {
 
     const draggableElements = document.querySelectorAll(".draggable");
     const droppableElements = document.querySelectorAll(".droppable");
-    console.log('draggableElements', draggableElements);
-    console.log('droppableElements', droppableElements);
+    // console.log('draggableElements', draggableElements);
+    // console.log('droppableElements', droppableElements);
 
     draggableElements.forEach(elem => {
       elem.addEventListener("dragstart", dragStart);
